@@ -32,8 +32,6 @@ const ExampleNavbar: FC = function () {
   const { isOpenOnSmallScreens, isPageWithSidebar, setOpenOnSmallScreens } =
     useSidebarContext();
 
-  
-
   return (
     <Navbar fluid>
       <div className="w-full p-3 lg:px-5 lg:pl-3">
@@ -56,7 +54,12 @@ const ExampleNavbar: FC = function () {
               <img
                 alt=""
                 src="/images/logo-light.svg"
-                className="mr-3 h-6 sm:h-8 block w-auto"
+                className="dark:hidden mr-3 h-6 sm:h-8 block w-auto"
+              />
+              <img
+                alt=""
+                src="/images/logo-dark.svg"
+                className="hidden dark:block mr-3 h-6 sm:h-8 block w-auto"
               />
             </Navbar.Brand>
             <form className="ml-16 hidden md:block">
